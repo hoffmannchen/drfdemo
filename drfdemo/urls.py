@@ -22,7 +22,8 @@ router = DefaultRouter()
 router.register('books', views.BooksViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('books1/', views.Books.as_view())
+    path('books1/', views.Books.as_view()),
+    path('booksapiview/', views.BooksAPIView.as_view()),
 ]
 
 urlpatterns += router.urls
